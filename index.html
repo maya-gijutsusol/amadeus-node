@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8'>
-  <title>amadeus 3.1.1 | Documentation</title>
+  <title>amadeus 3.2.0 | Documentation</title>
   <meta name='description' content='Node library for the Amadeus travel APIs'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>amadeus</h3>
-          <div class='mb1'><code>3.1.1</code></div>
+          <div class='mb1'><code>3.2.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -4509,7 +4509,7 @@ traveler is going. PAR, for example
 <pre class='hljs'>amadeus.shopping.flightOffers.get({
   <span class="hljs-attr">origin</span>: <span class="hljs-string">'NYC'</span>,
   <span class="hljs-attr">destination</span>: <span class="hljs-string">'MAD'</span>,
-  <span class="hljs-attr">departureDate</span>: <span class="hljs-string">'2019-08-01'</span>
+  <span class="hljs-attr">departureDate</span>: <span class="hljs-string">'2020-04-01'</span>
 });</pre>
 
       
@@ -4560,11 +4560,11 @@ traveler is going. PAR, for example
   <p>A namespaced client for the
 <code>/v1/shopping/flight-offers/prediction</code> endpoints</p>
 <p>Access via the <a href="#amadeus">Amadeus</a> object</p>
-<pre class='hljs'>let amadeus = new Amadeus();
+<pre class='hljs'><span class="hljs-keyword">let</span> amadeus = <span class="hljs-keyword">new</span> Amadeus();
 amadeus.shopping.flightOffers.prediction.post(
-    amadeus.shopping.flightOffers.get({ origin: 'NYC,
-                                        destination: 'MAD',
-                                        departureDate: '2019-08-01'
+    amadeus.shopping.flightOffers.get({ <span class="hljs-attr">origin</span>: <span class="hljs-string">'NYC'</span>,
+                                        <span class="hljs-attr">destination</span>: <span class="hljs-string">'MAD'</span>,
+                                        <span class="hljs-attr">departureDate</span>: <span class="hljs-string">'2020-04-01'</span>
                                       }).body
      );</pre>
 
