@@ -4543,11 +4543,11 @@ traveler is going. PAR, for example
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></code>:
         a Promise
-<p>Find the cheapest flights from New-York to Madrid for Summer 2019</p>
+<p>Find the cheapest flights from New-York to Madrid for Summer 2020</p>
 <pre class='hljs'>amadeus.shopping.flightOffers.get({
   <span class="hljs-attr">origin</span>: <span class="hljs-string">'NYC'</span>,
   <span class="hljs-attr">destination</span>: <span class="hljs-string">'MAD'</span>,
-  <span class="hljs-attr">departureDate</span>: <span class="hljs-string">'2020-04-01'</span>
+  <span class="hljs-attr">departureDate</span>: <span class="hljs-string">'2020-08-01'</span>
 });</pre>
 
       
@@ -4602,7 +4602,7 @@ traveler is going. PAR, for example
 amadeus.shopping.flightOffers.prediction.post(
     amadeus.shopping.flightOffers.get({ <span class="hljs-attr">origin</span>: <span class="hljs-string">'NYC'</span>,
                                         <span class="hljs-attr">destination</span>: <span class="hljs-string">'MAD'</span>,
-                                        <span class="hljs-attr">departureDate</span>: <span class="hljs-string">'2020-04-01'</span>
+                                        <span class="hljs-attr">departureDate</span>: <span class="hljs-string">'2020-08-01'</span>
                                       }).body
      );</pre>
 
@@ -6551,7 +6551,7 @@ amadeus.travel.predictions.tripPurpose;</pre>
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></code>:
         a Promise
-<p>Forecast traveler purpose for a NYC-MAD round-trip between 2020-08-01 &#x26; 2020-06-11.</p>
+<p>Forecast traveler purpose for a NYC-MAD round-trip between 2020-08-01 &#x26; 2020-08-12.</p>
 <pre class='hljs'>amadeus.travel.predictions.tripPurpose.get({
    <span class="hljs-attr">originLocationCode</span>: <span class="hljs-string">'NYC'</span>,
    <span class="hljs-attr">destinationLocationCode</span>: <span class="hljs-string">'MAD'</span>,
