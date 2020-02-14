@@ -831,6 +831,34 @@
               
                 
                 <li><a
+                  href='#flightdelay'
+                  class=" toggle-sibling">
+                  FlightDelay
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#flightdelayget'
+                        class='regular pre-open'>
+                        #get
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
                   href='#trippurpose'
                   class=" toggle-sibling">
                   TripPurpose
@@ -2591,7 +2619,13 @@ amadeus.travel.predictions;</pre>
     <div>
       
         <div class='space-bottom0'>
-          <span class='code bold'>trip_purpose</span> <code class='quiet'>(tripPurpose)</code>
+          <span class='code bold'>tripPurpose</span> <code class='quiet'>(<a href="#trippurpose">TripPurpose</a>)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>flightDelay</span> <code class='quiet'>(<a href="#flightdelay">FlightDelay</a>)</code>
           
           
         </div>
@@ -6739,6 +6773,269 @@ YYYY-MM format
   <span class="hljs-attr">originCityCode</span>: <span class="hljs-string">'MAD'</span>,
   <span class="hljs-attr">period</span>: <span class="hljs-string">'2017-01'</span>
 });</pre>
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='flightdelay'>
+      FlightDelay
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A namespaced client for the
+<code>/v1/travel/predictions/flight-delay</code> endpoints</p>
+<p>Access via the <a href="#amadeus">Amadeus</a> object</p>
+<pre class='hljs'><span class="hljs-keyword">let</span> amadeus = <span class="hljs-keyword">new</span> Amadeus();
+amadeus.travel.predictions.flightDelay;</pre>
+
+    <div class='pre p1 fill-light mt0'>new FlightDelay(client: <a href="#client">Client</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>client</span> <code class='quiet'>(<a href="#client">Client</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='flightdelayget'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>get(params)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>This machine learning API is based on a prediction model that takes the input of
+the user -time, carrier, airport and aircraft information- and
+predict the segment where the flight is likely to lay.</p>
+
+    <div class='pre p1 fill-light mt0'>get(params: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>params</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.originLocationCode</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>city/airport IATA code to which the traveler is departing, e.g. PAR for Paris
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.destinationLocationCode</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>city/airport IATA code to which the traveler is departing, e.g. PAR for Paris
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.departureDate</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>the date on which the traveler will depart from the origin to go to the destination. Dates are specified in the ISO 8601 YYYY-MM-DD format, e.g. 2019-12-25
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.departureTime</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>local time relative to originLocationCode on which the traveler will depart from the origin. Time respects ISO 8601 standard. e.g. 13:22:00
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.arrivalDate</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>the date on which the traveler will arrive to the destination from the origin. Dates are specified in the ISO 8601 YYYY-MM-DD format, e.g. 2019-12-25
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.arrivalTime</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>local time relative to destinationLocationCode on which the traveler will arrive to destination. Time respects ISO 8601 standard. e.g. 13:22:00
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.aircraftCode</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>IATA aircraft code (
+<a href="http://www.flugzeuginfo.net/table_accodes_iata_en.php">http://www.flugzeuginfo.net/table_accodes_iata_en.php</a>
+)
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.carrierCode</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>airline / carrier code
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.flightNumber</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>flight number as assigned by the carrier
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.duration</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>flight duration in ISO8601 PnYnMnDTnHnMnS format, e.g. PT2H10M
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></code>:
+        a Promise
+<p>Predict the segment where LH1009 (BRU-FRA) is likely to lay on 2020-01-14</p>
+<pre class='hljs'>amadeus.travel.predictions.flightDelay.get({
+   <span class="hljs-attr">originLocationCode</span>: <span class="hljs-string">'BRU'</span>,
+   <span class="hljs-attr">destinationLocationCode</span>: <span class="hljs-string">'FRA'</span>,
+   <span class="hljs-attr">departureDate</span>: <span class="hljs-string">'2020-01-14'</span>,
+   <span class="hljs-attr">departureTime</span>: <span class="hljs-string">'11:05:00'</span>,
+   <span class="hljs-attr">arrivalDate</span>: <span class="hljs-string">'2020-01-14'</span>,
+   <span class="hljs-attr">arrivalTime</span>: <span class="hljs-string">'12:10:00'</span>,
+   <span class="hljs-attr">aircraftCode</span>: <span class="hljs-string">'32A'</span>,
+   <span class="hljs-attr">carrierCode</span>: <span class="hljs-string">'LH'</span>,
+   <span class="hljs-attr">flightNumber</span>: <span class="hljs-string">'1009'</span>,
+   <span class="hljs-attr">duration</span>: <span class="hljs-string">'PT1H05M'</span>
+})</pre>
 
       
     
