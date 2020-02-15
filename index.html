@@ -589,6 +589,40 @@
               
                 
                 <li><a
+                  href='#flightofferssearch'
+                  class=" toggle-sibling">
+                  FlightOffersSearch
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#flightofferssearchget'
+                        class='regular pre-open'>
+                        #get
+                      </a></li>
+                      
+                      <li><a
+                        href='#flightofferssearchpost'
+                        class='regular pre-open'>
+                        #post
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
                   href='#flightoffers'
                   class=" toggle-sibling">
                   FlightOffers
@@ -4732,7 +4766,7 @@ language of your choice</p>
   
 
   <p>A namespaced client for the
-<code>/v1/shopping</code> endpoints</p>
+<code>/v1/shopping</code> and <code>/v2/shopping</code> endpoints</p>
 <p>Access via the <a href="#amadeus">Amadeus</a> object</p>
 <pre class='hljs'><span class="hljs-keyword">let</span> amadeus = <span class="hljs-keyword">new</span> Amadeus();
 amadeus.shopping;</pre>
@@ -4768,37 +4802,43 @@ amadeus.shopping;</pre>
     <div>
       
         <div class='space-bottom0'>
-          <span class='code bold'>flight_destinations</span> <code class='quiet'>(<a href="#flightdestinations">FlightDestinations</a>)</code>
+          <span class='code bold'>flightDestinations</span> <code class='quiet'>(<a href="#flightdestinations">FlightDestinations</a>)</code>
           
           
         </div>
       
         <div class='space-bottom0'>
-          <span class='code bold'>flight_offers</span> <code class='quiet'>(<a href="#flightoffers">FlightOffers</a>)</code>
+          <span class='code bold'>flightOffers</span> <code class='quiet'>(<a href="#flightoffers">FlightOffers</a>)</code>
           
           
         </div>
       
         <div class='space-bottom0'>
-          <span class='code bold'>flight_dates</span> <code class='quiet'>(<a href="#flightdates">FlightDates</a>)</code>
+          <span class='code bold'>flightOffersSearch</span> <code class='quiet'>(<a href="#flightofferssearch">FlightOffersSearch</a>)</code>
           
           
         </div>
       
         <div class='space-bottom0'>
-          <span class='code bold'>hotel_offers</span> <code class='quiet'>(<a href="#hoteloffers">HotelOffers</a>)</code>
+          <span class='code bold'>flightDates</span> <code class='quiet'>(<a href="#flightdates">FlightDates</a>)</code>
           
           
         </div>
       
         <div class='space-bottom0'>
-          <span class='code bold'>hotel_offer</span> <code class='quiet'>(<a href="#hoteloffer">HotelOffer</a>)</code>
+          <span class='code bold'>hotelOffers</span> <code class='quiet'>(<a href="#hoteloffers">HotelOffers</a>)</code>
           
           
         </div>
       
         <div class='space-bottom0'>
-          <span class='code bold'>hotel_offers_by_hotel</span> <code class='quiet'>(<a href="#hoteloffersbyhotel">HotelOffersByHotel</a>)</code>
+          <span class='code bold'>hotelOffer</span> <code class='quiet'>(<a href="#hoteloffer">HotelOffer</a>)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>hotelOffersByHotel</span> <code class='quiet'>(<a href="#hoteloffersbyhotel">HotelOffersByHotel</a>)</code>
           
           
         </div>
@@ -5217,6 +5257,364 @@ will depart. BOS, for example.
 <pre class='hljs'>amadeus.shopping.flightDestinations.get({
   <span class="hljs-attr">origin</span>: <span class="hljs-string">'MAD'</span>
 });</pre>
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='flightofferssearch'>
+      FlightOffersSearch
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A namespaced client for the
+<code>/v2/shopping/flight-offers</code> endpoints</p>
+<p>Access via the <a href="#amadeus">Amadeus</a> object</p>
+<pre class='hljs'><span class="hljs-keyword">let</span> amadeus = <span class="hljs-keyword">new</span> Amadeus();
+amadeus.shopping.flightOffersSeach;</pre>
+
+    <div class='pre p1 fill-light mt0'>new FlightOffersSearch(client: <a href="#client">Client</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>client</span> <code class='quiet'>(<a href="#client">Client</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='flightofferssearchget'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>get(params)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Get cheapest flight recommendations and prices on a given journey.</p>
+
+    <div class='pre p1 fill-light mt0'>get(params: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>params</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.originLocationCode</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>city/airport IATA code from which the traveler will depart, e.g. BOS for Boston
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.destinationLocationCode</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>city/airport IATA code to which the traveler is going, e.g. PAR for Paris
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.departureDate</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>the date on which the traveler will depart
+from the origin to go to the destination. Dates are specified in the ISO 8601 YYYY-MM-DD format, e.g. 2017-12-25
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.adults</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+  </td>
+  <td class='break-word'><span>the number of adult travelers (age 12 or older on date of departure)
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></code>:
+        a Promise
+<p>Get cheapest flight recommendations and prices for SYD-BKK on 2020-08-01 for 2 adults</p>
+<pre class='hljs'>amadeus.shopping.flightOffers.get({
+   <span class="hljs-attr">originLocationCode</span>: <span class="hljs-string">'SYD'</span>,
+   <span class="hljs-attr">destinationLocationCode</span>: <span class="hljs-string">'BKK'</span>,
+   <span class="hljs-attr">departureDate</span>: <span class="hljs-string">'2020-08-01'</span>,
+   <span class="hljs-attr">adults</span>: <span class="hljs-string">'2'</span>
+});</pre>
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='flightofferssearchpost'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>post(params)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>To do a customized search with every option available.</p>
+
+    <div class='pre p1 fill-light mt0'>post(params: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>params</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.getFlightOffersBody</span> <code class='quiet'>Double</code>
+  </td>
+  <td class='break-word'><span>list of criteria to retrieve a list of flight offers
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></code>:
+        a Promise
+<p>To do a customized search with given options.</p>
+<pre class='hljs'>amadeus.shopping.flightOffersSearch.post (<span class="hljs-built_in">JSON</span>.stringify({
+<span class="hljs-string">"currencyCode"</span>: <span class="hljs-string">"USD"</span>,
+<span class="hljs-string">"originDestinations"</span>: [
+{
+<span class="hljs-string">"id"</span>: <span class="hljs-string">"1"</span>,
+<span class="hljs-string">"originLocationCode"</span>: <span class="hljs-string">"RIO"</span>,
+<span class="hljs-string">"destinationLocationCode"</span>: <span class="hljs-string">"MAD"</span>,
+<span class="hljs-string">"departureDateTimeRange"</span>: {
+<span class="hljs-string">"date"</span>: <span class="hljs-string">"2020-03-01"</span>,
+<span class="hljs-string">"time"</span>: <span class="hljs-string">"10:00:00"</span>
+}
+},
+{
+<span class="hljs-string">"id"</span>: <span class="hljs-string">"2"</span>,
+<span class="hljs-string">"originLocationCode"</span>: <span class="hljs-string">"MAD"</span>,
+<span class="hljs-string">"destinationLocationCode"</span>: <span class="hljs-string">"RIO"</span>,
+<span class="hljs-string">"departureDateTimeRange"</span>: {
+<span class="hljs-string">"date"</span>: <span class="hljs-string">"2020-03-05"</span>,
+<span class="hljs-string">"time"</span>: <span class="hljs-string">"17:00:00"</span>
+}
+}
+],
+<span class="hljs-string">"travelers"</span>: [
+{
+<span class="hljs-string">"id"</span>: <span class="hljs-string">"1"</span>,
+<span class="hljs-string">"travelerType"</span>: <span class="hljs-string">"ADULT"</span>,
+<span class="hljs-string">"fareOptions"</span>: [
+<span class="hljs-string">"STANDARD"</span>
+]
+},
+{
+<span class="hljs-string">"id"</span>: <span class="hljs-string">"2"</span>,
+<span class="hljs-string">"travelerType"</span>: <span class="hljs-string">"CHILD"</span>,
+<span class="hljs-string">"fareOptions"</span>: [
+<span class="hljs-string">"STANDARD"</span>
+]
+}
+],
+<span class="hljs-string">"sources"</span>: [
+<span class="hljs-string">"GDS"</span>
+],
+<span class="hljs-string">"searchCriteria"</span>: {
+<span class="hljs-string">"maxFlightOffers"</span>: <span class="hljs-number">50</span>,
+<span class="hljs-string">"flightFilters"</span>: {
+<span class="hljs-string">"cabinRestrictions"</span>: [
+{
+<span class="hljs-string">"cabin"</span>: <span class="hljs-string">"BUSINESS"</span>,
+<span class="hljs-string">"coverage"</span>: <span class="hljs-string">"MOST_SEGMENTS"</span>,
+<span class="hljs-string">"originDestinationIds"</span>: [
+<span class="hljs-string">"1"</span>
+]
+}
+],
+<span class="hljs-string">"carrierRestrictions"</span>: {
+<span class="hljs-string">"excludedCarrierCodes"</span>: [
+<span class="hljs-string">"AA"</span>,
+<span class="hljs-string">"TP"</span>,
+<span class="hljs-string">"AZ"</span>
+]
+}
+}
+}
+}))</pre>
 
       
     
