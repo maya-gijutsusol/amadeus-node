@@ -114,6 +114,12 @@
                       </a></li>
                       
                       <li><a
+                        href='#clientdelete'
+                        class='regular pre-open'>
+                        #delete
+                      </a></li>
+                      
+                      <li><a
                         href='#clientdebug'
                         class='regular pre-open'>
                         #debug
@@ -211,6 +217,40 @@
                         href='#ontimeget'
                         class='regular pre-open'>
                         #get
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#flightorder'
+                  class=" toggle-sibling">
+                  FlightOrder
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#flightorderget'
+                        class='regular pre-open'>
+                        #get
+                      </a></li>
+                      
+                      <li><a
+                        href='#flightorderdelete'
+                        class='regular pre-open'>
+                        #delete
                       </a></li>
                       
                     </ul>
@@ -2014,6 +2054,86 @@ requests
       </div>
     </div>
   
+    <div class='border-bottom' id='clientdelete'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>delete(path, params)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Make an authenticated DELETE API call.</p>
+<pre class='hljs'>amadeus.client.delete(<span class="hljs-string">'/v2/foo/bar'</span>, { <span class="hljs-attr">some</span>: <span class="hljs-string">'data'</span> });</pre>
+
+    <div class='pre p1 fill-light mt0'>delete(path: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, params: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>path</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the full path of the API endpoint
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>params</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+            = <code>{}</code>)</code>
+	    the query string parameters
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></code>:
+        a Promise
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
     <div class='border-bottom' id='clientdebug'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
@@ -2914,6 +3034,199 @@ from the give airport. Dates are specified in the ISO 8601 YYYY-MM-DD format, e.
   <span class="hljs-attr">airportCode</span>: <span class="hljs-string">'JFK'</span>,
   <span class="hljs-attr">date</span>: <span class="hljs-string">'2020-08-01'</span>
 })</pre>
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='flightorder'>
+      FlightOrder
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A namespaced client for the
+<code>/v1/booking/flight-orders</code> endpoints</p>
+<p>Access via the <a href="#amadeus">Amadeus</a> object</p>
+<pre class='hljs'><span class="hljs-keyword">let</span> amadeus = <span class="hljs-keyword">new</span> Amadeus();
+amadeus.booking.flightOrder;</pre>
+
+    <div class='pre p1 fill-light mt0'>new FlightOrder(client: <a href="#client">Client</a>, orderId: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>client</span> <code class='quiet'>(<a href="#client">Client</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>orderId</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='flightorderget'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>get()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>To retrieve a flight order based on its id.</p>
+
+    <div class='pre p1 fill-light mt0'>get(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></code>:
+        a Promise
+<p>To retrieve a flight order with ID 'XXX'</p>
+<pre class='hljs'>amadeus.booking.flightOrder(<span class="hljs-string">'XXX'</span>).get();</pre>
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='flightorderdelete'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>delete()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>To cancel a flight order based on its id.</p>
+
+    <div class='pre p1 fill-light mt0'>delete(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></code>:
+        a Promise
+<p>To cancel a flight order with ID 'XXX'</p>
+<pre class='hljs'>amadeus.booking.flightOrder(<span class="hljs-string">'XXX'</span>).delete();</pre>
 
       
     
