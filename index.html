@@ -1069,6 +1069,74 @@
                 
                 </li>
               
+                
+                <li><a
+                  href='#tripparserjobs'
+                  class=" toggle-sibling">
+                  TripParserJobs
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#tripparserjobsget'
+                        class='regular pre-open'>
+                        #get
+                      </a></li>
+                      
+                      <li><a
+                        href='#tripparserjobspost'
+                        class='regular pre-open'>
+                        #post
+                      </a></li>
+                      
+                      <li><a
+                        href='#tripparserjobsconverttojson'
+                        class='regular pre-open'>
+                        #convertToJson
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#result'
+                  class=" toggle-sibling">
+                  Result
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#resultget'
+                        class='regular pre-open'>
+                        #get
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
             </ul>
           </div>
           <div class='mt1 h6 quiet'>
@@ -8696,6 +8764,424 @@ amadeus.travel.predictions.tripPurpose;</pre>
    <span class="hljs-attr">departureDate</span>: <span class="hljs-string">'2020-08-01'</span>,
    <span class="hljs-attr">returnDate</span>: <span class="hljs-string">'2020-08-12'</span>
 })</pre>
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='tripparserjobs'>
+      TripParserJobs
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A namespaced client for the
+<code>/v2/travel/trip-parser-jobs</code> endpoints</p>
+<p>Access via the <a href="#amadeus">Amadeus</a> object</p>
+<pre class='hljs'><span class="hljs-keyword">let</span> amadeus = <span class="hljs-keyword">new</span> Amadeus();
+amadeus.travel.tripParserJobs;</pre>
+
+    <div class='pre p1 fill-light mt0'>new TripParserJobs(client: <a href="#client">Client</a>, jobId: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>client</span> <code class='quiet'>(<a href="#client">Client</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>jobId</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>result</span> <code class='quiet'>(<a href="#result">Result</a>)</code>
+          
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='tripparserjobsget'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>get()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>To get the parsing status and the link to the result in case of successful parsing.</p>
+
+    <div class='pre p1 fill-light mt0'>get(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></code>:
+        a Promise
+<p>To get the parsing status and the link to the result for job with ID 'XXX'</p>
+<pre class='hljs'>amadeus.travel.tripParserJobs(<span class="hljs-string">'XXX'</span>).get();</pre>
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='tripparserjobspost'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>post(params)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>To send the request for the parsing with the booking details and input parameters.</p>
+
+    <div class='pre p1 fill-light mt0'>post(params: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>params</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></code>:
+        a Promise
+<p>To get the parsing status and the link to the result for job with ID 'XXX'</p>
+<pre class='hljs'>amadeus.travel.tripParserJobs().post({
+ <span class="hljs-string">'type'</span>: <span class="hljs-string">'trip-parser-job'</span>,
+ <span class="hljs-string">'content'</span>: amadeus.travel.tripParserJobs().convertToJson(<span class="hljs-string">"fileContentsInUTF8Format"</span>);
+});</pre>
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='tripparserjobsconverttojson'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>convertToJson(fileContentsInUTF8Format)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Helper method to convert file contents in UTF-8 encoded string
+into Base64 encoded string</p>
+
+    <div class='pre p1 fill-light mt0'>convertToJson(fileContentsInUTF8Format: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fileContentsInUTF8Format</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='result'>
+      Result
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A namespaced client for the
+<code>/v2/travel/trip-parser-jobs/{jobId}/result</code> endpoints</p>
+<p>Access via the <a href="#amadeus">Amadeus</a> object</p>
+<pre class='hljs'><span class="hljs-keyword">let</span> amadeus = <span class="hljs-keyword">new</span> Amadeus();
+amadeus.travel.tripParserJobs.result;</pre>
+
+    <div class='pre p1 fill-light mt0'>new Result(client: <a href="#client">Client</a>, jobId: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>client</span> <code class='quiet'>(<a href="#client">Client</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>jobId</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='resultget'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>get()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>To get the complete result of parsing as a aggregated view of Trip.</p>
+
+    <div class='pre p1 fill-light mt0'>get(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></code>:
+        a Promise
+<p>To get the complete result of parsing job ID 'XXX'</p>
+<pre class='hljs'>amadeus.travel.tripParserJobs(<span class="hljs-string">'XXX'</span>).result.get();</pre>
 
       
     
