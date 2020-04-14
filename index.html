@@ -6597,12 +6597,7 @@ traveler is going. PAR, for example
 <code>/v1/shopping/flight-offers/prediction</code> endpoints</p>
 <p>Access via the <a href="#amadeus">Amadeus</a> object</p>
 <pre class='hljs'><span class="hljs-keyword">let</span> amadeus = <span class="hljs-keyword">new</span> Amadeus();
-amadeus.shopping.flightOffers.prediction.post(
-    amadeus.shopping.flightOffers.get({ <span class="hljs-attr">origin</span>: <span class="hljs-string">'NYC'</span>,
-                                        <span class="hljs-attr">destination</span>: <span class="hljs-string">'MAD'</span>,
-                                        <span class="hljs-attr">departureDate</span>: <span class="hljs-string">'2020-08-01'</span>
-                                      }).body
-     );</pre>
+amadeus.shopping.flightOffers.prediction;</pre>
 
     <div class='pre p1 fill-light mt0'>new FlightChoicePrediction(client: <a href="#client">Client</a>)</div>
   
@@ -6656,7 +6651,7 @@ amadeus.shopping.flightOffers.prediction.post(
 
   
 
-  <p>Returns a list of relevant airports near to a given point.</p>
+  <p>Returns a list of flight offers with the probability to be chosen.</p>
 
     <div class='pre p1 fill-light mt0'>post(params: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></div>
   
@@ -6680,42 +6675,6 @@ amadeus.shopping.flightOffers.prediction.post(
 	    
           </div>
           
-          <table class='mt1 mb2 fixed-table h5 col-12'>
-            <colgroup>
-              <col width='30%' />
-              <col width='70%' />
-            </colgroup>
-            <thead>
-              <tr class='bold fill-light'>
-                <th>Name</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody class='mt1'>
-              
-                <tr>
-  <td class='break-word'><span class='code bold'>params.latitude</span> <code class='quiet'>Double</code>
-  </td>
-  <td class='break-word'><span>latitude location to be at the center of
-the search circle - required
-</span></td>
-</tr>
-
-
-              
-                <tr>
-  <td class='break-word'><span class='code bold'>params.longitude</span> <code class='quiet'>Double</code>
-  </td>
-  <td class='break-word'><span>longitude location to be at the center of
-the search circle - required
-</span></td>
-</tr>
-
-
-              
-            </tbody>
-          </table>
-          
         </div>
       
     </div>
@@ -6728,10 +6687,19 @@ the search circle - required
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></code>:
         a Promise
-<p>Find the nearest airport to the 49.0000,2.55 lat/long</p>
-<pre class='hljs'>amadeus.referenceData.urls.locations.airports.get({
-  longitude: 49.0000,
-  latitude: 2.55
+<p>Returns flights from NYC to MAD with the probability to be chosen.</p>
+<pre class='hljs'>amadeus.shopping.flightOffers.get({
+  <span class="hljs-attr">origin</span>: <span class="hljs-string">'MAD'</span>,
+  <span class="hljs-attr">destination</span>: <span class="hljs-string">'NYC'</span>,
+  <span class="hljs-attr">departureDate</span>: <span class="hljs-string">'2020-10-01'</span>
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">flightOffersResponse</span>) </span>{
+  <span class="hljs-keyword">return</span> amadeus.shopping.flightOffers.prediction.post(
+    <span class="hljs-built_in">JSON</span>.stringify(flightOffersResponse.result)
+  );
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(response);
+}).catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
+  <span class="hljs-built_in">console</span>.error(response);
 });</pre>
 
       
