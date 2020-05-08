@@ -720,28 +720,10 @@
                 
                 <li><a
                   href='#flightoffers'
-                  class=" toggle-sibling">
+                  class="">
                   FlightOffers
-                  <span class='icon'>▸</span>
+                  
                 </a>
-                
-                <div class='toggle-target display-none'>
-                  
-                  
-                    <ul class='list-reset py1-ul pl1'>
-                      <li class='h5'><span>Instance members</span></li>
-                      
-                      <li><a
-                        href='#flightoffersget'
-                        class='regular pre-open'>
-                        #get
-                      </a></li>
-                      
-                    </ul>
-                  
-                  
-                  
-                </div>
                 
                 </li>
               
@@ -6445,132 +6427,6 @@ amadeus.shopping.flightOffers;</pre>
   
 
   
-    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
-    <div class="clearfix">
-  
-    <div class='border-bottom' id='flightoffersget'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>get(params)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-
-  <p>Find the cheapest bookable flights for a date.</p>
-
-    <div class='pre p1 fill-light mt0'>get(params: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>params</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
-            = <code>{}</code>)</code>
-	    
-          </div>
-          
-          <table class='mt1 mb2 fixed-table h5 col-12'>
-            <colgroup>
-              <col width='30%' />
-              <col width='70%' />
-            </colgroup>
-            <thead>
-              <tr class='bold fill-light'>
-                <th>Name</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody class='mt1'>
-              
-                <tr>
-  <td class='break-word'><span class='code bold'>params.origin</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
-  </td>
-  <td class='break-word'><span>City/Airport IATA code from which the flight
-will depart. BOS, for example.
-</span></td>
-</tr>
-
-
-              
-                <tr>
-  <td class='break-word'><span class='code bold'>params.destination</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
-  </td>
-  <td class='break-word'><span>City/Airport IATA code to which the
-traveler is going. PAR, for example
-</span></td>
-</tr>
-
-
-              
-                <tr>
-  <td class='break-word'><span class='code bold'>params.departureDate</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
-  </td>
-  <td class='break-word'><span>The departure date for the flight
-</span></td>
-</tr>
-
-
-              
-            </tbody>
-          </table>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></code>:
-        a Promise
-<p>Find the cheapest flights from New-York to Madrid for Summer 2020</p>
-<pre class='hljs'>amadeus.shopping.flightOffers.get({
-  <span class="hljs-attr">origin</span>: <span class="hljs-string">'NYC'</span>,
-  <span class="hljs-attr">destination</span>: <span class="hljs-string">'MAD'</span>,
-  <span class="hljs-attr">departureDate</span>: <span class="hljs-string">'2020-08-01'</span>
-});</pre>
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-      </div>
-    </div>
-  
-</div>
-
-  
 
   
 
@@ -6688,18 +6544,19 @@ amadeus.shopping.flightOffers.prediction;</pre>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></code>:
         a Promise
 <p>Returns flights from NYC to MAD with the probability to be chosen.</p>
-<pre class='hljs'>amadeus.shopping.flightOffers.get({
-  <span class="hljs-attr">origin</span>: <span class="hljs-string">'MAD'</span>,
-  <span class="hljs-attr">destination</span>: <span class="hljs-string">'NYC'</span>,
-  <span class="hljs-attr">departureDate</span>: <span class="hljs-string">'2020-10-01'</span>
-}).then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">flightOffersResponse</span>) </span>{
-  <span class="hljs-keyword">return</span> amadeus.shopping.flightOffers.prediction.post(
-    <span class="hljs-built_in">JSON</span>.stringify(flightOffersResponse.result)
-  );
-}).then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(response);
-}).catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
-  <span class="hljs-built_in">console</span>.error(response);
+<pre class='hljs'>amadeus.shopping.flightOffersSearch.get({
+    <span class="hljs-attr">originLocationCode</span>: <span class="hljs-string">'SYD'</span>,
+    <span class="hljs-attr">destinationLocationCode</span>: <span class="hljs-string">'BKK'</span>,
+    <span class="hljs-attr">departureDate</span>: <span class="hljs-string">'2020-08-01'</span>,
+    <span class="hljs-attr">adults</span>: <span class="hljs-string">'2'</span>
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>)</span>{
+    <span class="hljs-keyword">return</span> amadeus.shopping.flightOffers.prediction.post(
+      <span class="hljs-built_in">JSON</span>.stringify(response)
+    );
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>)</span>{
+    <span class="hljs-built_in">console</span>.log(response.data);
+}).catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">responseError</span>)</span>{
+    <span class="hljs-built_in">console</span>.log(responseError);
 });</pre>
 
       
