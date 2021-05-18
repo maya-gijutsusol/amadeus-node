@@ -1145,6 +1145,34 @@
               
                 
                 <li><a
+                  href='#upselling'
+                  class=" toggle-sibling">
+                  Upselling
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#upsellingpost'
+                        class='regular pre-open'>
+                        #post
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
                   href='#hoteloffer'
                   class=" toggle-sibling">
                   HotelOffer
@@ -8687,7 +8715,7 @@ amadeus.shopping.activity</pre>
 <code>/v1/shopping/availability/flight-availabilities</code> endpoints</p>
 <p>Access via the <a href="#amadeus">Amadeus</a> object</p>
 <pre class='hljs'><span class="hljs-keyword">let</span> amadeus = <span class="hljs-keyword">new</span> Amadeus();
-amadeus.availability.FlightAvailabilities;</pre>
+amadeus.availability.flightAvailabilities;</pre>
 
     <div class='pre p1 fill-light mt0'>new FlightAvailabilities(client: <a href="#client">Client</a>)</div>
   
@@ -9901,6 +9929,147 @@ pricing needs to be retrieved
      <span class="hljs-string">'flightOffers'</span>: []
  }
 });</pre>
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='upselling'>
+      Upselling
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A namespaced client for the
+<code>/v1/shopping/flight-offers/upselling</code> endpoints</p>
+<p>Access via the <a href="#amadeus">Amadeus</a> object</p>
+<pre class='hljs'><span class="hljs-keyword">let</span> amadeus = <span class="hljs-keyword">new</span> Amadeus();
+amadeus.shopping.flightOffers.upselling;</pre>
+
+    <div class='pre p1 fill-light mt0'>new Upselling(client: <a href="#client">Client</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>client</span> <code class='quiet'>(<a href="#client">Client</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='upsellingpost'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>post(params)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Get available seats in different fare classes</p>
+
+    <div class='pre p1 fill-light mt0'>post(params: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>params</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+            = <code>{}</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="#response">Response</a>, <a href="#responseerror">ResponseError</a>></code>:
+        a Promise
+<pre class='hljs'>amadeus.shopping.flightOffers.upselling.post(body);</pre>
 
       
     
