@@ -24,8 +24,8 @@ import Airline       from './amadeus/namespaces/airline';
  * ```js
  * var Amadeus = require('amadeus');
  * var amadeus = new Amadeus({
- *     clientId:    'YOUR_CLIENT_ID',
- *     clientSecret: 'YOUR_CLIENT_SECRET'
+ *     clientId:    '01mFMOd6FAc0bmalcY5zapSAKzusPaAb',
+ *     clientSecret: 'q6ZinAeWjtWrtTgg'
  * });
  * ```
  *
